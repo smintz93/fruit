@@ -7,7 +7,25 @@
 </head>
 <body>
 
-	<h1>Fruits show page</h1>		
+	<h1>Fruits show page</h1>
+
+	<!-- lets make the template show the data	 -->
+	<!-- the data available inside the bracket is whatever is passed over as on object as the second parameter  -->
+
+	The <%= fruit.name; %> is <%= fruit.color; %>. 
+
+	<!-- note: the <%= %> tag is for an EXPRESSION -->
+
+	<!-- there is another type of tag, which lets you add javascript code or logic to template --> 
+	<% if(fruit.readyToEat == true) { %>
+		The fruit is ready to eat.
+	<%} else { %>	
+		The fruit is not ready to eat
+	<% } %>	
+
+	Create a template for your index
+	Render it at the correct route 
+	It should list 
 
 </body>
 </html>

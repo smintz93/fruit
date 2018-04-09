@@ -19,7 +19,13 @@ app.get("/fruits/:id", (req, res) => {
 	// res.send(fruits[index])
 
 	// you render templates
-	res.render("show.ejs")
+	// you can pass in the data you want to display in your template as the second parameter
+	// your data will be an always be an object 
+	// advice: use singualr for show page
+	res.render("show.ejs", {
+		fruit: fruits[req.params.id]
+	})
+
 })
 
 
