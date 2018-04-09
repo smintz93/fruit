@@ -12,7 +12,13 @@ app.get("/fruits", (req, res) => {
 	res.send(fruits);
 })
 
+// show route 
 
+
+app.get("fruits/:id", (req, res) => {
+	const index is = req.params.id
+	res.send(fruits[index])
+})
 
 
 
