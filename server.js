@@ -1,10 +1,10 @@
 
-const express = require("express");
+const express = require("express"); // not syntax for module there is no . or / 
 const app = express();
 
-
-const fruits = ["apple", "banana", "pear"];
-
+// our data
+// not the syntax for requring file
+const fruits = require("./models/fruits.js")
 
 // index route 
 
@@ -15,11 +15,10 @@ app.get("/fruits", (req, res) => {
 // show route 
 
 
-app.get("fruits/:id", (req, res) => {
-	const index is = req.params.id
+app.get("/fruits/:id", (req, res) => {
+	const index  = req.params.id
 	res.send(fruits[index])
 })
-
 
 
 app.listen(3000, () => {
