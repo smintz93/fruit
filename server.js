@@ -14,10 +14,12 @@ app.get("/fruits", (req, res) => {
 
 // show route 
 
-
 app.get("/fruits/:id", (req, res) => {
-	const index  = req.params.id
-	res.send(fruits[index])
+	// const index  = req.params.id
+	// res.send(fruits[index])
+
+	// you render templates
+	res.render("show.ejs")
 })
 
 
