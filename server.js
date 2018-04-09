@@ -9,7 +9,15 @@ const fruits = require("./models/fruits.js")
 // index route 
 
 app.get("/fruits", (req, res) => {
-	res.send(fruits);
+	// res.send(fruits);
+	// for(let i = 0; i < fruits.length; i++) {
+
+	// }
+	
+	res.render("index.ejs", {
+		fruitList: fruits
+
+	})
 })
 
 // show route 
